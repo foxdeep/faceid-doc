@@ -1,0 +1,141 @@
+---
+sidebar_position: 3
+id: member
+title: Members
+tags:
+  - Getting started
+  - Main module
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/members.png)
+
+</BrowserWindow>
+
+### Overview
+
+The **Members** page allows administrators to manage team members, their face data, and associated virtual teams. The page displays the current team capacity and provides comprehensive member management tools.
+
+> **Note:** The team capacity, which is based on the purchased license. If the capacity is not enough, users can contact the company to extend it.
+
+---
+
+### Functions
+
+![member-functions](/assets/main/member-functions.png)
+
+- Testing: Upload images to find matching results in the database
+- Model Info: View latest training information
+- Training: Initiate model training using current member data, if red dot is displayed, the model is outdated
+- Types: Configure and manage member type groupings
+
+### Member Management Tools
+
+![member-table-functions](/assets/main/member-table-functions.png)
+
+- Search and Filters
+
+  - Search field supports queries by UID or name
+  - Filter button allows filtering members by type
+
+- Bulk Operations
+
+  - Export to Excel (.xlsx) or raw data (.csv)
+  - Import
+    - Batch upload members using provided template
+    - Batch upload member face pictures
+
+- Batch Delete
+
+  Remove multiple members using a template, the deleted members are moved to trash initially
+
+- Trash Management
+  - Access deleted members via the trashcan icon.
+  - Restore or permanently delete members.
+  - Temporarily store accidentally deleted members.
+
+---
+
+### Steps to Add Members
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member.png)
+
+</BrowserWindow>
+
+1. Select a team and click the row to enter members page.
+2. Click the **+** icon to open member form.
+3. Upload member's avatar and fill in member details.
+
+### Managing a Member
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-mgmt.png)
+
+</BrowserWindow>
+
+- Click the **three-dot menu** next to a member to access the following options:
+  - **Face pictures**: Manage the face pictures associated with the member.
+  - **Edit virtual team**: Manage the virtual teams associated with the member.
+  - **Edit**: Modify the member details.
+  - **Delete**: Remove the member to trashcan.
+
+#### Uploading face pictures
+
+1. Click **Face pictures** in the menu to open the face pictures dialog.
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-face-pic.png)
+
+</BrowserWindow>
+
+2. Click **Upload pictures** in the up-right corner of the dialog.
+
+- Click / drag and drop images in the dialog to upload images
+- 🚨 Ensure photos meet requirements:
+  - JPG format.
+  - Resolution between 300x300 and 5000x5000.
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-upload-pic.png)
+
+</BrowserWindow>
+
+3. Click **Next** to next step, the system auto-detects pictures and filters non-compliant pictures. After detection, select the correct **face area** / **select all faces** and click **Finish** to upload faces.
+
+> **Note:** The face capacity, which is based on the purchased license. If the capacity is not enough, users can contact the company to extend it.
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-upload-pic-2.png)
+
+</BrowserWindow>
+
+---
+
+### Training and Testing Models
+
+#### Training
+
+- Go to the member list and click the **Training** icon.
+- Wait for the training to complete before initiating new sessions.
+
+#### Testing
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-testing.png)
+
+</BrowserWindow>
+
+1. Click the **Testing** icon for the active team.
+2. Upload photos for testing.
+
+---

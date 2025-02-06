@@ -1,0 +1,33 @@
+---
+sidebar_position: 1
+id: overview
+title: 概述
+tags:
+  - 入门指南
+  - 主模组
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/login'}>
+
+![snapshot](/assets/main/login.png)
+
+</BrowserWindow>
+
+## OWL FaceID 云端服务概述
+
+OWL FaceID 云端服务简化了面部识别流程，提供以下核心功能：
+
+1. **群组创建**：用户可为不同组织或团体建立独立群组。
+2. **组员管理**：群组内的成员面部数据将被存储并用于识别。
+3. **面部识别模型训练**：系统根据用户上传的照片训练并更新识别模型。
+4. **模型测试**：验证训练模型在新面部图像上的识别效果。
+5. **协力方授权启动**：设备（如手机或平板）需获得授权才能访问服务。
+
+## OWL FaceID 重要术语
+
+- **群组**：用于管理面部识别的单位，例如公司或班级。
+- **组员**：群组内的个人，其面部照片存储于系统中。
+- **UID (唯一标识符)**：每位组员的专属识别码。
+- **协力方授权**：允许设备访问 OWL FaceID 服务的数字授权，为“签到好简单”等应用所需。

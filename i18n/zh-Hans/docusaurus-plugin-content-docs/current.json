@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "下一步",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Main module": {
+    "message": "主模组",
+    "description": "The label for category Main module in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Attendance module": {
+    "message": "出勤模组",
+    "description": "The label for category Attendance module in sidebar tutorialSidebar"
+  }
+}

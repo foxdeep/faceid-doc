@@ -1,0 +1,139 @@
+---
+sidebar_position: 3
+id: member
+title: 組員
+tags:
+  - 入門指南
+  - 主模組
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/members.png)
+
+</BrowserWindow>
+
+### 概述
+
+**組員**頁面允許管理員管理群組內的組員、其面部數據及相關的虛擬群組。該頁面顯示當前的群組容量，並提供完整的組員管理工具。
+
+> **注意：** 群組容量受購買的許可證限制。如需擴充，請聯繫我們。
+
+---
+
+### 功能
+
+![member-functions](/assets/main/member-functions.png)
+
+- 測試：上傳圖片，查找資料庫中的匹配結果。
+- 模型信息：查看最新的訓練狀態。
+- 訓練：基於當前組員數據訓練模型，若顯示紅點則表示模型已過時。
+- 類型：設定和管理組員類別。
+
+### 組員管理工具
+
+![member-table-functions](/assets/main/member-table-functions.png)
+
+- 搜索和篩選
+
+  - 透過 UID 或名稱搜尋組員。
+  - 使用篩選功能按類型分類。
+
+- 批量操作
+
+  - 導出為 Excel (.xlsx) 或 CSV (.csv) 格式。
+  - 批量導入
+    - 透過提供的模板上傳組員資料。
+    - 批量上傳組員面部照片。
+
+- 批量刪除
+
+  透過模板刪除多個組員，刪除後的組員將移至垃圾桶。
+
+- 垃圾桶管理
+  - 點擊垃圾桶圖標，查看已刪除的組員。
+  - 可選擇恢復或永久刪除組員。
+
+---
+
+### 新增組員
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member.png)
+
+</BrowserWindow>
+
+1. 選擇一個群組並點擊以進入組員頁面。
+2. 點擊 **+** 圖標以打開組員表單。
+3. 上傳頭像並填寫組員資料。
+
+### 管理組員
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-mgmt.png)
+
+</BrowserWindow>
+
+- 點擊組員旁邊的 **更多菜單** 以進行管理：
+  - **人臉照片**：管理組員的照片資料。
+  - **編輯虛擬群組**：調整組員所屬的虛擬群組。
+  - **編輯**：修改組員資訊。
+  - **刪除**：將組員移至垃圾桶。
+
+#### 上傳人臉照片
+
+1. 點擊菜單中的 **人臉照片** 以打開人臉照片對話框。
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-face-pic.png)
+
+</BrowserWindow>
+
+2. 點擊 **上傳照片**，選擇或拖放圖片上傳。
+
+- 🚨 照片要求：
+  - 格式：JPG
+  - 解析度：300x300 至 5000x5000
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-upload-pic.png)
+
+</BrowserWindow>
+
+3. 點擊 **下一步** 讓系統自動檢測照片，篩選不合規圖片；選擇正確的 **人臉區域** 或 **選擇所有人臉**，然後點擊 **完成** 上傳。
+
+> **注意：** 面部容量基於購買的許可證。如果容量不足，用戶可以聯繫公司進行擴展。
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-upload-pic-2.png)
+
+</BrowserWindow>
+
+---
+
+### 訓練和測試模型
+
+#### 訓練
+
+- 前往組員列表，點擊 **訓練** 圖標。
+- 等待訓練完成後，再啟動新訓練。
+
+#### 測試
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/settings/teams'}>
+
+![snapshot](/assets/main/member-testing.png)
+
+</BrowserWindow>
+
+1. 點擊群組的 **測試** 圖標。
+2. 上傳測試圖片，檢測模型識別效果。
+
+---

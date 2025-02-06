@@ -1,0 +1,33 @@
+---
+sidebar_position: 1
+id: overview
+title: 概述
+tags:
+  - 入門指南
+  - 主模組
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/login'}>
+
+![snapshot](/assets/main/login.png)
+
+</BrowserWindow>
+
+## OWL FaceID 雲端服務概述
+
+OWL FaceID 雲端服務簡化了臉部識別流程，提供以下核心功能：
+
+1. **群組創建**：用戶可為不同組織或團體建立獨立群組。
+2. **組員管理**：群組內的成員臉部數據將被存儲並用於識別。
+3. **臉部識別模型訓練**：系統根據用戶上傳的照片訓練並更新識別模型。
+4. **模型測試**：驗證訓練模型在新臉部圖像上的識別效果。
+5. **協力方授權啟動**：設備（如手機或平板）需獲得授權才能存取服務。
+
+## OWL FaceID 重要術語
+
+- **群組**：用於管理臉部識別的單位，例如公司或班級。
+- **組員**：群組內的個人，其臉部照片存儲於系統中。
+- **UID (唯一標識符)**：每位組員的專屬識別碼。
+- **協力方授權**：允許設備存取 OWL FaceID 服務的數位授權，為「簽到好簡單」等應用所需。

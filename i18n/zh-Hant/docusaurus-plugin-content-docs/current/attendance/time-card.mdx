@@ -1,0 +1,43 @@
+---
+sidebar_position: 6
+id: time-card
+title: 打卡記錄
+tags:
+  - 入門指南
+  - 出勤模組
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/attendance/time-cards'}>
+
+![snapshot](/assets/attendance/time-card.png)
+
+</BrowserWindow>
+
+### 概述
+
+**打卡記錄**頁面讓用戶查看所有組員的打卡記錄。頁面顯示以下信息：
+
+- **個人照片**：組員的照片。
+- **組員**：組員的名稱與 UID。
+- **身分卡時間戳**：組員刷卡的時間。
+- **人臉識別時間戳**：人臉識別系統識別到組員的時間。
+- **捕捉人臉**：系統捕捉到的組員人臉圖像。
+- **完成狀態**：打卡記錄的完成狀態。
+- **協力單元**：協助組員打卡的設備。
+
+---
+
+### 搜索和篩選
+
+![time-card-filter](/assets/attendance/time-card-filter.png)
+
+- **搜索**：在搜索欄輸入組員的 UID 查找打卡記錄。
+- **篩選**：可依**時間範圍**、**協力單元**、**類型**、**身份**和**完成狀態**進行篩選。
+
+---
+
+### 導出
+
+- 點擊**導出**按鈕，將打卡記錄導出為 CSV 文件。用戶可選擇導出 **總結報告** 或 **詳細記錄**。

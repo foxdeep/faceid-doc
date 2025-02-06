@@ -1,0 +1,48 @@
+---
+sidebar_position: 4
+id: id-card
+title: 身分卡
+tags:
+  - 入門指南
+  - 出勤模組
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/attendance/id-cards'}>
+
+![snapshot](/assets/attendance/id-cards.png)
+
+</BrowserWindow>
+
+### 概述
+
+**身分卡**頁面允許管理員管理在「簽到好簡單」中使用的身分卡，當打卡方式為 **人臉識別 + 身分卡** 時使用。
+
+---
+
+### 創建身分卡的步驟
+
+1. 將滑鼠懸停在右下角的 **紅色“+”按鈕** 上，然後選擇 **創建身分卡**。
+2. 輸入組員 UID，系統將自動識別。
+
+   ![id-card](/assets/attendance/id-card.png)
+
+3. 保存身分卡，它將顯示在列表中。
+
+### 批量導入身分卡
+
+1. 將滑鼠懸停在右下角的 **紅色“+”按鈕** 上，然後選擇 **批量上傳**。
+2. 根據模板說明上傳包含身分卡詳細信息的 CSV 文件。
+
+   ![upload-id-cards](/assets/attendance/upload-id-cards.png)
+
+3. 上傳後，系統會顯示一份報告，顯示成功和失敗的上傳結果。身分卡將被添加至列表中。
+
+---
+
+### 管理身分卡
+
+- 點擊身分卡旁邊的 **更多菜單**，可選擇以下操作：
+  - **編輯**: 修改身分卡詳細信息。
+  - **刪除**: 刪除身分卡（此操作不可逆）。
