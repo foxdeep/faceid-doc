@@ -1,0 +1,119 @@
+---
+sidebar_position: 4
+title: EasyClockIn User Guide
+sidebar_label: EasyClockIn
+---
+
+# EasyClockIn
+
+## Installation
+
+After installation, the screen will look like the image below:
+
+![settings](/assets/easyclockin/en/settings.png)
+
+## Server Configuration
+
+Enter the URL in the **Server IP** field, and the port in the **Port** field.
+
+Example:
+
+```text
+Server IP: http://192.168.8.27
+Port: 8888
+```
+
+If there is no port, just enter the URL:
+
+```text
+Server IP: http://foxconn.com
+Port: (leave empty)
+```
+
+Enter the **Buddy Id** (case-insensitive). This ID is generated after being created in the **Third-party Authorization** section of the backend.
+
+![buddy](/assets/easyclockin/en/buddy.png)
+
+Example:
+
+```text
+Buddy name: Foxconn
+Buddy ID: B0D80C441
+```
+
+![setting-result](/assets/easyclockin/en/setting-result.png)
+
+After clicking **Confirm**, if all information is correct, you will be directed to the **Facial Recognition** page.
+
+![home](/assets/easyclockin/en/home.png)
+
+## The facial recognition
+
+The facial recognition page is shown in the image below.
+
+![main](/assets/easyclockin/en/main.png)
+
+### Display Information
+
+1. Current time
+2. Facial recognition range
+3. URL and version
+4. Current status
+5. Set current status
+
+### Settings
+
+![menu](/assets/easyclockin/en/menu.png)
+
+Click **Settings** to open a menu.
+
+#### Facial Recognition Results
+
+![success](/assets/easyclockin/en/success.png)
+![failure](/assets/easyclockin/en/failure.png)
+
+- **Success:** Recognition is completed successfully.
+- **Failure:** Recognition fails.
+
+## Re-upload Photo
+
+![reupload](/assets/easyclockin/en/reupload.png)
+
+To re-upload a photo:
+
+1. Click **Settings**.
+2. Click **Rebuild**.
+3. Enter the **Employee ID**.
+4. Enter the **Birthday (MM-DD)** as set in the backend.
+5. Click **Confirm** to start a 3-second countdown and take a photo.
+
+   ![confirm](/assets/easyclockin/en/confirm.png)
+
+6. Click **Again** to retake the photo if necessary.
+7. Click **Rebuild** to upload the photo.
+
+A success or failure message will be displayed, and the uploaded photo can be viewed in the backend.
+
+## RFID Card
+
+You need to set up both facial recognition and ID card in the [backend](/docs/attendance/activated-team#key-information-displayed).
+
+![RFID](/assets/easyclockin/en/RFID.png)
+
+### Display Information
+
+1. Display the third-party unit name
+2. Display the URL and version
+3. Display the current date and time
+
+### Scanning Process
+
+After successfully scanning the **RFID card**, the system will enter the **Facial Recognition** page.
+
+If no face is detected within **3 to 4 seconds**, the system will automatically return to the **RFID card** page.
+
+### Scan Failure
+
+![RFID-fail](/assets/easyclockin/en/RFID-fail.png)
+
+If the scan fails, retry scanning the card.

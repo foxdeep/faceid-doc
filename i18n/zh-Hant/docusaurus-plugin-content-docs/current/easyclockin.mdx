@@ -1,0 +1,121 @@
+---
+sidebar_position: 4
+title: EasyClockIn User Guide
+sidebar_label: 簽到好簡單
+---
+
+# 簽到好簡單
+
+## 安裝
+
+安裝完成後如下圖:
+
+![settings](/assets/easyclockin/ch/settings.png)
+
+## 伺服器配置
+
+在 **Server IP** 欄位中輸入網址，在 **Port** 欄位中輸入埠。
+
+範例:
+
+```text
+Server IP: http://192.168.8.27
+Port: 8888
+```
+
+如果沒有 Port 可以只輸入網址:
+
+```text
+Server IP: http://foxconn.com
+Port: (留空)
+```
+
+2. 輸入 **協力單元 Id** (不分大小寫) 此 id 來自[後台網址協力方授權](/docs/main/buddy-license)內建立後產生
+
+   ![buddy](/assets/easyclockin/ch/buddy.png)
+
+範例:
+
+```text
+協力單元名稱: Foxconn
+協力單元 ID: B0D80C441
+```
+
+![setting-result](/assets/easyclockin/ch/setting-result.png)
+
+3. 按下**確認**後送出, 輸入皆正確會進入臉部辨識頁面
+
+![home](/assets/easyclockin/ch/home.png)
+
+## 臉部辨識
+
+臉部辨識頁面如下圖
+
+![main](/assets/easyclockin/ch/main.png)
+
+### 畫面資訊
+
+1. 顯示目前時間
+2. 偵測臉部辨識範圍
+3. 顯示網址與版本
+4. 顯示目前狀態
+5. 設定目前狀態
+
+### 設定
+
+點擊 **設定** 打開選單。
+
+![menu](/assets/easyclockin/ch/menu.png)
+
+#### 臉部識別結果
+
+- 臉部辨識成功
+
+  ![success](/assets/easyclockin/ch/success.png)
+
+- 臉部辨識失敗
+
+  ![failure](/assets/easyclockin/ch/failure.png)
+
+## 補建照片
+
+![reupload](/assets/easyclockin/ch/reupload.png)
+
+如何補建照片:
+
+1. 點擊 **設定**
+2. 點擊 **補建**
+3. 輸入 **工號**
+4. 輸入後台設定的 **生日 (MM-DD)**
+5. 按下 **確認** 後會倒數 3 秒對準框框進行拍攝
+
+   ![confirm](/assets/easyclockin/ch/confirm.png)
+
+6. 點擊 **重拍** 可重新拍照。
+7. 點擊 **補建** 上傳照片。
+
+**補建** 成功或失敗都會顯示訊息, 補建的照片可於後台觀看
+
+## 感應卡片
+
+需要在[後台](/docs/attendance/activated-team#%E9%A1%AF%E7%A4%BA%E7%9A%84%E9%97%9C%E9%8D%B5%E4%BF%A1%E6%81%AF)設定 **人臉辨識+身分卡** 為打卡模式
+
+![RFID](/assets/easyclockin/ch/RFID.png)
+
+### 畫面資訊
+
+1. 顯示 **協力單元名稱**
+2. 顯示 **網址** 與 **版本**
+3. 顯示 **目前日期時間**
+
+### 感應步驟
+
+感應 **感應卡片** 成功後會自動跳轉到 **臉部辨識** 畫面
+
+如果 **3 至 4 秒** 內沒有偵測到臉部，會自動跳回 **感應卡片** 頁面
+
+### 感應失敗
+
+![RFID-fail](/assets/easyclockin/ch/RFID-fail.png)
+
+如果感應失敗，請重新感應卡片。
