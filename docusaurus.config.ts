@@ -99,7 +99,7 @@ const config: Config = {
     },
     algolia: {
       appId: 'IIHMDIPV2E',
-      apiKey: '609d7122cbfa5a73be04e9471dfe6254',
+      apiKey: '875bd047cadb44cd0eb7e840e26a58ec',
       indexName: 'owl-algolia',
     },
     footer: {
