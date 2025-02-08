@@ -100,7 +100,7 @@ const config: Config = {
     algolia: {
       appId: 'IIHMDIPV2E',
       apiKey: '875bd047cadb44cd0eb7e840e26a58ec',
-      indexName: 'face-algolia',
+      indexName: 'faceid-algolia',
     },
     footer: {
       style: 'dark',
