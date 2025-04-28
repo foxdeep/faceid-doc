@@ -4,17 +4,24 @@ title: EasyClockIn User Guide
 sidebar_label: 簽到好簡單
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # 簽到好簡單
 
 ## 安裝
 
 安裝完成後如下圖:
 
-![settings](/assets/easyclockin/ch/settings.png)
+<img
+  src={require('/assets/easyclockin/ch/settings.png').default}
+  alt="settings"
+  width="500"
+/>
 
 ## 伺服器配置
 
-在 **Server IP** 欄位中輸入網址，在 **Port** 欄位中輸入埠。
+1. 在 **Server IP** 欄位中輸入網址，在 **Port** 欄位中輸入埠。
 
 範例:
 
@@ -34,6 +41,8 @@ Port: (留空)
 
    ![buddy](/assets/easyclockin/ch/buddy.png)
 
+3. **ESD**為防靜電測試器, 如果該裝置有連接防靜電測試器, 請下拉選單選擇對應的裝置, 如果沒有請選擇**無**
+
 範例:
 
 ```text
@@ -41,17 +50,27 @@ Port: (留空)
 協力單元 ID: B0D80C441
 ```
 
-![setting-result](/assets/easyclockin/ch/setting-result.png)
+<img
+  src={require('/assets/easyclockin/ch/setting-result.png').default}
+  alt="setting-result"
+  width="500"
+/>
 
-3. 按下**確認**後送出, 輸入皆正確會進入臉部辨識頁面
+4. 按下**確認**後送出, 輸入皆正確會進入主要頁面
 
 ![home](/assets/easyclockin/ch/home.png)
 
-## 臉部辨識
+5. 目前有兩種模式 **出勤模組**和**ESD 模組**
+
+## 出勤模組-臉部辨識
 
 臉部辨識頁面如下圖
 
-![main](/assets/easyclockin/ch/main.png)
+<img
+  src={require('/assets/easyclockin/ch/main.png').default}
+  alt="main"
+  width="500"
+/>
 
 ### 畫面資訊
 
@@ -65,47 +84,74 @@ Port: (留空)
 
 點擊 **設定** 打開選單。
 
-![menu](/assets/easyclockin/ch/menu.png)
+<img
+  src={require('/assets/easyclockin/ch/menu.png').default}
+  alt="menu"
+  width="500"
+/>
 
 #### 臉部識別結果
 
-- 臉部辨識成功
+<Tabs>
+  <TabItem value="success" label="成功" default>
+    臉部辨識成功
+    <img
+      src={require('/assets/easyclockin/ch/success.png').default}
+      alt="success"
+      width="500"
+    />
+  </TabItem>
+  <TabItem value="failure" label="失敗">
+    臉部辨識失敗
+    <img
+      src={require('/assets/easyclockin/ch/failure.png').default}
+      alt="failure"
+      width="500"
+    />
+  </TabItem>
+</Tabs>
 
-  ![success](/assets/easyclockin/ch/success.png)
+## 上傳照片
 
-- 臉部辨識失敗
+<img
+  src={require('/assets/easyclockin/ch/reupload.png').default}
+  alt="reupload"
+  width="500"
+/>
 
-  ![failure](/assets/easyclockin/ch/failure.png)
-
-## 補建照片
-
-![reupload](/assets/easyclockin/ch/reupload.png)
-
-如何補建照片:
+如何上傳照片:
 
 1. 點擊 **設定**
-2. 點擊 **補建**
+2. 點擊 **上傳**
 3. 輸入 **工號**
 4. 輸入後台設定的 **生日 (MM-DD)**
 5. 按下 **確認** 後會倒數 3 秒對準框框進行拍攝
 
-   ![confirm](/assets/easyclockin/ch/confirm.png)
+   <img
+     src={require('/assets/easyclockin/ch/confirm.png').default}
+     alt="confirm"
+     width="500"
+   />
 
 6. 點擊 **重拍** 可重新拍照。
-7. 點擊 **補建** 上傳照片。
+7. 點擊 **上傳** 上傳照片。
 
-**補建** 成功或失敗都會顯示訊息, 補建的照片可於後台觀看
+**上傳** 成功或失敗都會顯示訊息, 上傳的照片可於後台觀看
 
-## 感應卡片
+## 出勤模組-感應卡片
 
 需要在[後台](/docs/attendance/activated-team#%E9%A1%AF%E7%A4%BA%E7%9A%84%E9%97%9C%E9%8D%B5%E4%BF%A1%E6%81%AF)設定 **人臉辨識+身分卡** 為打卡模式
 
-![RFID](/assets/easyclockin/ch/RFID.png)
+<img
+  src={require('/assets/easyclockin/ch/RFID.png').default}
+  alt="RFID"
+  width="500"
+/>
 
 ### 畫面資訊
 
 1. 顯示 **協力單元名稱**
-2. 顯示 **網址** 與 **版本**
+2. 顯示 **版本**
 3. 顯示 **目前日期時間**
 
 ### 感應步驟
@@ -116,6 +162,123 @@ Port: (留空)
 
 ### 感應失敗
 
-![RFID-fail](/assets/easyclockin/ch/RFID-fail.png)
+<img
+  src={require('/assets/easyclockin/ch/RFID-fail.png').default}
+  alt="RFID-fail"
+  width="500"
+/>
 
 如果感應失敗，請重新感應卡片。
+
+## ESD 模組
+
+有三個模式 **人臉辨識+ESD**, **身分卡+ESD**, **人臉辨識+身分卡+ESD**
+
+上方三個 icon 為導引列, 由左而右依序表示為 **身分卡** > **人臉辨識** > **ESD**, 用來告知使用者目前操作流程
+紅色 icon 代表進行中尚未完成操作流程, 綠色 icon 代表已完成這個操作流程
+
+### 人臉辨識+身分卡+ESD
+
+<img
+  src={require('/assets/easyclockin/ch/esd-main.png').default}
+  alt="esd-main"
+  width="500"
+/>
+
+感應完卡片後, 會跳轉到 **臉部辨識** 畫面
+
+<img
+  src={require('/assets/easyclockin/ch/esd-main2.png').default}
+  alt="esd-main2"
+  width="500"
+/>
+
+辨識成功後, 會跳轉到 **ESD** 畫面
+
+<img
+  src={require('/assets/easyclockin/ch/esd-main3.png').default}
+  alt="esd-main3"
+  width="500"
+/>
+
+1. 顯示使用者資訊
+2. 頁面倒數秒數(可在後台設定), 倒數完畢會關閉此頁面回到第一個操作流程步驟
+3. 顯示目前 ESD 操作結果
+4. 顯示目前 ESD 操作步驟
+5. 顯示目前 ESD 偵測到的數值
+6. 手動取消會關閉此頁面回到第一個操作流程步驟
+
+如果數值沒有通過：
+
+<img
+  src={require('/assets/easyclockin/ch/esd-main4.png').default}
+  alt="esd-main4"
+  width="500"
+/>
+
+如果數值通過後等待 1 秒鐘後關閉此頁面回到第一個操作流程步驟：
+
+<img
+  src={require('/assets/easyclockin/ch/esd-main5.png').default}
+  alt="esd-main5"
+  width="500"
+/>
+
+如果裝置沒有連到 ESD, 會顯示此畫面, 檢查是否 ESD 名稱是否正確, 不正確可以點擊**登出**按鈕, 會回到初始設定頁面
+
+<img
+  src={require('/assets/easyclockin/ch/esd-disconnection.png').default}
+  alt="esd-disconnection"
+  width="500"
+/>
+
+### 人臉辨識+ESD
+
+沒有偵測到使用者臉部, 會出現臉部辨識待機畫面
+
+<img
+  src={require('/assets/easyclockin/ch/esd-face.png').default}
+  alt="esd-face"
+  width="500"
+/>
+
+### 身分卡+ESD
+
+感應卡片待機畫面
+
+<img
+  src={require('/assets/easyclockin/ch/esd-card.png').default}
+  alt="esd-card"
+  width="500"
+/>
+
+## 管理者設定頁面
+
+<img
+  src={require('/assets/easyclockin/ch/hide-settings.png').default}
+  alt="hide-settings"
+  width="500"
+/>
+
+1. 點選右上角 **協力單元名稱**
+2. 下方會跳出設定 icon, 點擊該 icon
+
+<img
+  src={require('/assets/easyclockin/ch/hide-settings-password.png').default}
+  alt="hide-settings-password"
+  width="500"
+/>
+
+為了避免普通員工不誤觸, 需要管理者輸入密碼, 密碼為**2317**
+
+<img
+  src={require('/assets/easyclockin/ch/hide-settings-list.png').default}
+  alt="hide-settings-list"
+  width="500"
+/>
+
+1. 重新設定伺服器位址, 需要點選右邊**重新啟動**, app 會重啟才會生效
+2. 顯示目前安裝的系統版本號
+3. 如果發生問題可以點選**上傳紀錄**, 會將目前的裝置紀錄的資訊上傳到後台
+4. 重新選擇對應的 ESD 裝置
+5. 點擊**登出**按鈕, 會回到初始設定頁面

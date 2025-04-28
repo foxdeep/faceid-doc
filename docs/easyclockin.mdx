@@ -4,17 +4,20 @@ title: EasyClockIn User Guide
 sidebar_label: EasyClockIn
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 # EasyClockIn
 
 ## Installation
 
 After installation, the screen will look like the image below:
 
-![settings](/assets/easyclockin/en/settings.png)
+<img src="/assets/easyclockin/en/settings.png" alt="settings" width="500" />
 
 ## Server Configuration
 
-Enter the URL in the **Server IP** field, and the port in the **Port** field.
+1. Enter the URL in the **Server IP** field, and the port in the **Port** field.
 
 Example:
 
@@ -30,9 +33,11 @@ Server IP: http://foxconn.com
 Port: (leave empty)
 ```
 
-Enter the **Buddy Id** (case-insensitive). This ID is generated after being created in the **Third-party Authorization** section of the backend.
+2. Enter the **Buddy Id** (case-insensitive). This ID is generated after being created in the **Third-party Authorization** section of the backend.
 
 ![buddy](/assets/easyclockin/en/buddy.png)
+
+3. **ESD** is the static electricity tester. If the device is connected to a static electricity tester, please select the corresponding device from the dropdown menu. If not, please select **NONE**.
 
 Example:
 
@@ -41,17 +46,23 @@ Buddy name: Foxconn
 Buddy ID: B0D80C441
 ```
 
-![setting-result](/assets/easyclockin/en/setting-result.png)
+<img
+  src="/assets/easyclockin/en/setting-result.png"
+  alt="setting-result"
+  width="500"
+/>
 
-After clicking **Confirm**, if all information is correct, you will be directed to the **Facial Recognition** page.
+4. After clicking **Confirm**, if all information is correct, you will be directed to the main page.
 
 ![home](/assets/easyclockin/en/home.png)
 
-## The facial recognition
+5. Currently, there are two modes: **Attendance Module** and **ESD Module**.
+
+## Attendance Module - Facial Recognition
 
 The facial recognition page is shown in the image below.
 
-![main](/assets/easyclockin/en/main.png)
+<img src="/assets/easyclockin/en/main.png" alt="main" width="500" />
 
 ### Display Information
 
@@ -63,42 +74,47 @@ The facial recognition page is shown in the image below.
 
 ### Settings
 
-![menu](/assets/easyclockin/en/menu.png)
+<img src="/assets/easyclockin/en/menu.png" alt="menu" width="500" />
 
 Click **Settings** to open a menu.
 
 #### Facial Recognition Results
 
-![success](/assets/easyclockin/en/success.png)
-![failure](/assets/easyclockin/en/failure.png)
+<Tabs>
+  <TabItem value="success" label="Success" default>
+    Recognition is completed successfully.
+    <img src="/assets/easyclockin/en/success.png" alt="success" width="500" />
+  </TabItem>
+  <TabItem value="failure" label="Failure">
+    Recognition fails.
+    <img src="/assets/easyclockin/en/failure.png" alt="failure" width="500" />
+  </TabItem>
+</Tabs>
 
-- **Success:** Recognition is completed successfully.
-- **Failure:** Recognition fails.
+## Upload Photo
 
-## Re-upload Photo
-
-![reupload](/assets/easyclockin/en/reupload.png)
+<img src="/assets/easyclockin/en/reupload.png" alt="reupload" width="500" />
 
 To re-upload a photo:
 
 1. Click **Settings**.
-2. Click **Rebuild**.
+2. Click **Upload**.
 3. Enter the **Employee ID**.
 4. Enter the **Birthday (MM-DD)** as set in the backend.
 5. Click **Confirm** to start a 3-second countdown and take a photo.
 
-   ![confirm](/assets/easyclockin/en/confirm.png)
+   <img src="/assets/easyclockin/en/confirm.png" alt="confirm" width="500" />
 
 6. Click **Again** to retake the photo if necessary.
-7. Click **Rebuild** to upload the photo.
+7. Click **Upload** to upload the photo.
 
 A success or failure message will be displayed, and the uploaded photo can be viewed in the backend.
 
-## RFID Card
+## Attendance module - RFID Card
 
 You need to set up both facial recognition and ID card in the [backend](/docs/attendance/activated-team#key-information-displayed).
 
-![RFID](/assets/easyclockin/en/RFID.png)
+<img src="/assets/easyclockin/en/RFID.png" alt="RFID" width="500" />
 
 ### Display Information
 
@@ -114,6 +130,90 @@ If no face is detected within **3 to 4 seconds**, the system will automatically 
 
 ### Scan Failure
 
-![RFID-fail](/assets/easyclockin/en/RFID-fail.png)
+<img src="/assets/easyclockin/en/RFID-fail.png" alt="RFID-fail" width="500" />
 
 If the scan fails, retry scanning the card.
+
+## ESD Module
+
+There are three modes: Face Recognition + ESD, ID Card + ESD, and Face Recognition + ID Card + ESD.
+
+The three icons at the top serve as a navigation bar, representing ID Card > Face Recognition > ESD from left to right, indicating the current step in the process. A red icon means the step is in progress and not yet completed; a green icon means the step is completed.
+
+### Face Recognition + ID Card + ESD
+
+<img src="/assets/easyclockin/en/esd-main.png" alt="esd-main" width="500" />
+
+After sensing the card, the interface switches to the Face Recognition screen.
+
+<img src="/assets/easyclockin/en/esd-main2.png" alt="esd-main2" width="500" />
+
+After successful recognition, it switches to the ESD screen.
+
+<img src="/assets/easyclockin/en/esd-main3.png" alt="esd-main3" width="500" />
+
+1. Displays user information
+2. Page countdown timer (configurable in the backend); when the countdown ends, the page closes and returns to the first step
+3. Shows the current ESD operation result
+4. Shows the current ESD operation step
+5. Shows the current value detected by ESD
+6. Manual cancel will close the page and return to the first step
+
+If the value does not pass:
+
+<img src="/assets/easyclockin/en/esd-main4.png" alt="esd-main4" width="500" />
+
+If the value passes, the page will close and return to the first step after waiting for 1 second:
+
+<img src="/assets/easyclockin/en/esd-main5.png" alt="esd-main5" width="500" />
+
+If the device is not connected to ESD, this screen will appear. Check if the ESD name is correct. If not, you can click the Logout button to return to the initial settings page.
+
+<img
+  src="/assets/easyclockin/en/esd-disconnection.png"
+  alt="esd-disconnection"
+  width="500"
+/>
+
+### Face Recognition + ESD
+
+If no face is detected, a face recognition standby screen will appear.
+
+<img src="/assets/easyclockin/en/esd-face.png" alt="esd-face" width="500" />
+
+### ID Card + ESD
+
+ID card sensing standby screen
+
+<img src="/assets/easyclockin/en/esd-card.png" alt="esd-card" width="500" />
+
+## Administrator Settings Page
+
+<img
+  src="/assets/easyclockin/en/hide-settings.png"
+  alt="hide-settings"
+  width="500"
+/>
+
+1. Tap the unit name at the top right
+2. A settings icon will appear at the bottom; tap the icon
+
+<img
+  src="/assets/easyclockin/en/hide-settings-password.png"
+  alt="hide-settings-password"
+  width="500"
+/>
+
+To prevent accidental access by regular employees, administrators need to enter the password, which is 2317.
+
+<img
+  src="/assets/easyclockin/en/hide-settings-list.png"
+  alt="hide-settings-list"
+  width="500"
+/>
+
+1. Reset the server address (tap Restart on the right; the app will reboot for changes to take effect)
+2. Display the currently installed system version number
+3. If an issue occurs, tap Upload Logs to upload the device logs to the backend
+4. Re-select the corresponding ESD device
+5. Tap the Logout button to return to the initial settings page
