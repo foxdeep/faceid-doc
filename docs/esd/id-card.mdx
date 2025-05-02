@@ -1,0 +1,48 @@
+---
+sidebar_position: 4
+id: id-card
+title: ID Cards
+tags:
+  - Getting started
+  - ESD module
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/esd/id-cards'}>
+
+![snapshot](/assets/esd/id-cards.png)
+
+</BrowserWindow>
+
+### Overview
+
+The **ID Cards** page enables administrators to manage ID cards that can be used in the ESD module when the punch-in method is **Face recognition + ID card + ESD** or **ID card + ESD**.
+
+---
+
+### Steps to Create an ID Card
+
+1. Hover over the **red “+” button** in the bottom-right corner and select **Create an ID Card**.
+2. Provide the details of the member, and the system will automatically find the member with the UID.
+
+   ![id-card](/assets/esd/id-card.png)
+
+3. Save the ID card, and it will be added to the list.
+
+### Batch Import ID Cards
+
+1. Hover over the **red “+” button** in the bottom-right corner and select **Batch Upload**.
+2. Follow the instructions provided in the template to upload a CSV file containing the ID card details.
+
+   ![upload-id-cards](/assets/esd/upload-id-cards.png)
+
+3. After uploading, the system will generate a report showing the success and failure results of the upload. The ID cards will then be added to the list.
+
+---
+
+### Managing an ID Card
+
+- To access the options for managing a specific ID Card, click the **three-dot menu** next to the ID Card.
+  - **Edit**: Modify the ID Card details.
+  - **Delete**: Remove the ID Card (please note that this action is irreversible).

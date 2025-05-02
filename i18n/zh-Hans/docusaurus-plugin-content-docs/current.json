@@ -10,5 +10,9 @@
   "sidebar.tutorialSidebar.category.Attendance module": {
     "message": "出勤模组",
     "description": "The label for category Attendance module in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.ESD module": {
+    "message": "ESD模组",
+    "description": "The label for category ESD module in sidebar tutorialSidebar"
   }
 }

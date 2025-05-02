@@ -1,0 +1,48 @@
+---
+sidebar_position: 4
+id: id-card
+title: 身份卡
+tags:
+  - 入门指南
+  - ESD 模组
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/esd/id-cards'}>
+
+![snapshot](/assets/esd/id-cards.png)
+
+</BrowserWindow>
+
+### 概述
+
+**身份卡**页面允许管理员管理在 ESD 模组中使用的身份卡，当打卡方式为**人脸识别 + 身份卡 + ESD**或**身份卡 + ESD**时使用。
+
+---
+
+### 创建身份卡的步骤
+
+1. 将鼠标悬停在右下角的**红色“+”按钮**上，然后选择**创建身份卡**。
+2. 输入组员的详细信息，系统将自动识别 UID。
+
+   ![id-card](/assets/esd/id-card.png)
+
+3. 保存身份卡，它将显示在列表中。
+
+### 批量导入身份卡
+
+1. 将鼠标悬停在右下角的**红色“+”按钮**上，然后选择**批量上传**。
+2. 根据模板说明上传包含身份卡详细信息的 CSV 文件。
+
+   ![upload-id-cards](/assets/esd/upload-id-cards.png)
+
+3. 上传后，系统会生成一份报告，显示成功和失败的上传结果。身份卡将被添加至列表中。
+
+---
+
+### 管理身份卡
+
+- 点击身份卡旁边的**更多菜单**，可选择以下操作：
+  - **编辑**: 修改身份卡详细信息。
+  - **删除**: 删除身份卡（此操作不可逆）。

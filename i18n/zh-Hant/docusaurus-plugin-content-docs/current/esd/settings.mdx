@@ -1,0 +1,42 @@
+---
+sidebar_position: 8
+id: settings
+title: 設定
+tags:
+  - Getting started
+  - ESD module
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow'
+
+<BrowserWindow url={'https://owlfaceid.nanqing.cloud/esd/settings'}>
+
+![snapshot](/assets/esd/settings-purchase-plan.png)
+
+</BrowserWindow>
+
+### 概述
+
+ESD 模組的設定頁面允許管理員配置 ESD 合規性的關鍵參數。這些設定確保系統根據組織的需求運行。
+
+### 主要設定
+
+1. **已啟動群組**  
+   管理員可以選擇哪些群組啟用 ESD 跟蹤。只有選定的群組會被監控 ESD 合規性。
+
+   - 群組可以按公司分組以便於選擇。
+   - 也支持虛擬群組（如果適用）。
+
+2. **倒數計時器**  
+   配置 ESD 測試的倒數計時器。此計時器決定用戶在啟動測試後完成 ESD 測試的時間。
+   - 可選擇的時間：0、5、10、15、20、30、40、50、60 秒。
+
+### 如何更新設定
+
+1. 前往 **設定** 頁面。
+2. 使用下拉選單：
+   - 選擇 **已啟動群組**。
+   - 設定 ESD 測試的 **倒數計時器**。
+3. 點擊 **套用** 以保存更改。
+
+**注意**：只有具有管理員權限的用戶可以訪問和修改設定。
