@@ -11,13 +11,13 @@ import BrowserWindow from '@site/src/components/BrowserWindow'
 
 <BrowserWindow url={'https://owlfaceid.nanqing.cloud/esd/events'}>
 
-![snapshot](/assets/esd/events.png)
+![snapshot](/assets/esd/ch/events.png)
 
 </BrowserWindow>
 
 ### 概述
 
-**打卡记录**页面让管理员查看与 ESD 相关的详细打卡记录。这些记录包括 ESD 测试结果、组员详情以及协助信息。页面旨在帮助组织高效监控 ESD 合规性。
+**打卡记录**页面让管理员查看与 ESD 相关的详细打卡记录。这些记录包括 ESD 测试结果、组员详情以及相关信息。页面旨在帮助组织高效监控 ESD 追踪。
 
 ---
 
@@ -28,7 +28,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow'
 - **个人照片**：组员的照片。
 - **组员**：组员的名称与 UID。
 - **组员类型**：组员的类型（例如：员工、承包商）。
-- **身份卡时间戳**：组员刷卡的时间（如适用）。
+- **员工卡时间戳**：组员刷卡的时间（如适用）。
 - **人脸识别时间戳**：人脸识别系统识别到组员的时间（如适用）。
 - **捕捉人脸**：人脸识别系统捕捉到的组员人脸图像。
 - **完成状态**：ESD 测试的状态（例如：通过、失败）。
@@ -39,7 +39,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow'
 
 ### 搜索和筛选
 
-![events-filter](/assets/esd/events-filter.png)
+![events-filter](/assets/esd/ch/events-filter.png)
 
 - **搜索**：在搜索栏输入组员的 UID 查找对应的打卡记录。
 - **筛选**：可依**时间范围**、**协力单元**、**组员类型**、**身份**和**完成状态**进行筛选。
@@ -48,12 +48,4 @@ import BrowserWindow from '@site/src/components/BrowserWindow'
 
 ### 导出
 
-- 点击**导出**按钮，将打卡记录导出为 CSV 文件。用户可选择导出**总结报告**或**详细记录**。
-
----
-
-### 注意事项
-
-- **打卡记录**页面专为追踪 ESD 合规性设计。
-- 仅管理员可访问此页面。
-- ESD 数据包括手部和脚部的详细电压水平，这对于确保符合 ESD 安全标准至关重要。
+- 点击**导出**按钮，将打卡记录导出为 CSV 文件。
